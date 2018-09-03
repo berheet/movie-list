@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
+import Routes from './routes'
+import {Link} from 'react-router-dom'
 import './App.css';
-import Intro from './components/Intro/Intro';
-import Series from './components/Series/Series';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">TV Series List</h1>
+          <div><h1 className="App-title">TV Series List</h1> <Link to='/' exact path><p style={{color:'white'}}>[Home]</p></Link></div>
         </header>
-        <Intro message="Here you can find all of the series!"/>
-        <Series/>
+        <Routes/>
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import SeriesList from '../SeriesList/SeriesList';
 import Loader from '../Loader/Loader';
+import Intro from '../Intro/Intro'
 
 export default class Series extends Component{
     state = {
@@ -23,6 +24,7 @@ export default class Series extends Component{
         const {series, seriesName, isLoading} = this.state;
         return(
             <div>
+                <Intro message="Find your favorite series!"/>
                 <div> <input value = {seriesName} type='text' onChange={this.onSeriesInputChange}/></div>
                 {!isLoading && series.length === 0 && seriesName.trim() === '' &&
                 <p>Please enter a title name </p>
